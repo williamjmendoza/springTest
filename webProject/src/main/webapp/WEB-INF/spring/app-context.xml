@@ -16,4 +16,12 @@
 	
 	<context:component-scan base-package="com.will.webProject.controller" />
 
+	<bean id="specificConfig"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+		<property name="location">
+			<value>classpath:/specific.properties</value>
+		</property>
+	</bean>
+
 </beans>
